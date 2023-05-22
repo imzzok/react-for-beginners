@@ -8,10 +8,21 @@
 <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
-    function app() {
-        return <div></div>
+    function SaveBtn(){
+        return <button>Save Changes</button>
+    }
+    function ConfirmBtn(){
+        return <button>Confirm</button>
+    }
+    function App() {
+        return (
+            <div>
+                <SaveBtn />
+                <ConfirmBtn />
+            </div>
+            );
     }
     const root = document.getElementById('root');
-    rReactDOM.render(<App />, root);
+    ReactDOM.render(<App />, root);
     </script>
 </html>
