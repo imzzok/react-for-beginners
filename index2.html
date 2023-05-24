@@ -6,7 +6,8 @@
 </body>
 <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone.js"></script>
+<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
 <script type="text/babel">
     function Btn({text, fontSize}) {
     console.log(text, "was rendered");
@@ -24,6 +25,10 @@
                 {text}
             </button>
         );
+    }
+    Btn.propTypes = {
+        text: PropTypes.sring.isRequired,
+        fontSize: PropTypes.number,
     }
     function App() {
         return (
